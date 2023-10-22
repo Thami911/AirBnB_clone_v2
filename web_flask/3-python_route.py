@@ -26,8 +26,8 @@ def c_is_fun(text):
     return 'C ' + text.replace('_', ' ')
 
 
-@app.route('/python/')
-@app.route('/python/<text>')
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def python_with_text(text='is cool'):
     """Reformat text based on optional variable
     """
