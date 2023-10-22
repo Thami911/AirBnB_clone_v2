@@ -92,5 +92,5 @@ class DBStorage:
         self.__session = scoped_session(session_factory)()
 
     def close(self):
-        '''close sqlachemy session'''
-        self.__session.close()
+        '''Private session attribute method'''
+        self.__session.remove()
